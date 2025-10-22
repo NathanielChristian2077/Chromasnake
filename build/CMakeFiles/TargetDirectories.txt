@@ -1,3 +1,0 @@
-/home/naan/projects/chromasnake/build/CMakeFiles/chromasnake.dir
-/home/naan/projects/chromasnake/build/CMakeFiles/edit_cache.dir
-/home/naan/projects/chromasnake/build/CMakeFiles/rebuild_cache.dir
