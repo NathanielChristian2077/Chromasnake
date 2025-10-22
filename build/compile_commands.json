@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/naan/projects/chromasnake/build",
+  "command": "/usr/bin/c++  -I/home/naan/projects/chromasnake/src -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wconversion -Wshadow -Wpedantic -o CMakeFiles/chromasnake.dir/App.cpp.o -c /home/naan/projects/chromasnake/App.cpp",
+  "file": "/home/naan/projects/chromasnake/App.cpp",
+  "output": "CMakeFiles/chromasnake.dir/App.cpp.o"
+},
+{
+  "directory": "/home/naan/projects/chromasnake/build",
+  "command": "/usr/bin/c++  -I/home/naan/projects/chromasnake/src -O3 -DNDEBUG -std=gnu++20 -Wall -Wextra -Wconversion -Wshadow -Wpedantic -o CMakeFiles/chromasnake.dir/Grid.cpp.o -c /home/naan/projects/chromasnake/Grid.cpp",
+  "file": "/home/naan/projects/chromasnake/Grid.cpp",
+  "output": "CMakeFiles/chromasnake.dir/Grid.cpp.o"
+}
+]

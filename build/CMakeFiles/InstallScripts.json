@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/naan/projects/chromasnake/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
