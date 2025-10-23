@@ -4,18 +4,18 @@
 class RNG {
 public:
     static RNG& instance(){
-	static RNG r;
-	return r;
+        static RNG r;
+        return r;
     }
 
     int irand(int a, int b) {
-	std::uniform_int_distribution<int> d(a,b);
-	return d(mt);
+        std::uniform_int_distribution<int> d(a,b);
+        return d(mt);
     }
 
     float frand(float a, float b){
-	std::uniform_real_distribuition<float> d(a,b);
-	return d(mt);
+        std::uniform_real_distribution<float> d(a,b);
+        return d(mt);
     }
 
 private:
