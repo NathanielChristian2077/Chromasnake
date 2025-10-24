@@ -7,6 +7,8 @@
 #include <cmath>
 
 Snake::Snake(const Grid& g, sf::Color c) : grid(g), color(c){
+    // Ticks (local, pq eu achei mais prático)
+    baseTick = 0.28f;
     int x = RNG::instance().irand(0, grid.width()-1);
     int y = RNG::instance().irand(0, grid.height()-1);
     body.push_front({x,y});
@@ -53,7 +55,7 @@ void Snake::lateStep(std::unordered_map<long long,int>& headClaims,
     if ((*occupancy)[nh.y][nh.x] > 0) dying = true;
 
     bool ate = foods.consumeAt(nh);
-    growNext = ate;
+    if (ate) ++growPending;
 }
 
 void Snake::resolveAndMove(const std::unordered_map<long long,int>& headClaims,
@@ -67,9 +69,12 @@ void Snake::resolveAndMove(const std::unordered_map<long long,int>& headClaims,
     if (dying) { kill(occ); return; }
 
     sf::Vector2i tail = body.back();
-    if (!growNext) occ[tail.y][tail.x] = 0;
-    else           growNext = false;
-    if (!growNext) body.pop_back();
+    if (growPending == 0) {
+        occ[tail.y][tail.x] = 0;
+        body.pop_back();
+    } else {
+        --growPending;
+    }
 
     body.push_front(nextHead);
     occ[nextHead.y][nextHead.x] = myId;
@@ -176,4 +181,3 @@ void Snake::kill(std::vector<std::vector<int>>& occ){
 void Snake::remove(std::vector<Dir>& v, Dir d){
     v.erase(std::remove(v.begin(), v.end(), d), v.end());
 }
-

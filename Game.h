@@ -21,11 +21,14 @@ private:
     template<class T> void spawn();
     void connectAll();
     void occupyInitialBodies();
+    void evaluateEnd();
 
     const Grid& grid;
     Food food;
     int desiredFoods = 2;
     std::vector<std::unique_ptr<Entidade>> entities;
     std::vector<std::vector<int>> occupancy;
+    bool gameOver = false;
+    int winnerIndex = -1;
 };
 

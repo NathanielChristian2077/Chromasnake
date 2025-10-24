@@ -8,7 +8,7 @@ public:
     static constexpr  int CS = 20;
 
     // Ticks (velocidade do loop do jogo basicamente)
-    static constexpr float BASE_TICK = 0.12f;
+    static constexpr float BASE_TICK = 0.28f;
 
     // Atributos base
     static constexpr float SPEED_MULT_BASE = 1.0f;

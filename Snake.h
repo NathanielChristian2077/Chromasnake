@@ -61,6 +61,7 @@ protected:
     float tickAccum = 0.f;
     bool alive_ = true;
     bool growNext = false;
+    int growPending = 0;
     bool dying = false;
     sf::Vector2i nextHead{0,0};
 
@@ -77,7 +78,7 @@ class YellowSnake : public Snake, public Yellow { public: explicit YellowSnake(c
 class BlueSnake   : public Snake, public Blue  { public: explicit BlueSnake(const Grid& g)  : Snake(g, sf::Color::Blue) {} };
 
 class OrangeSnake : public Snake, public Mix<Red,Yellow> {
-public: explicit OrangeSnake(const Grid& g) : Snake(g, sf::Color(255,165,0)) {}
+public: explicit OrangeSnake(const Grid& g) : Snake(g, sf::Color(255,74,3)) {}
 };
 class PurpleSnake : public Snake, public Mix<Red,Blue> {
 public: explicit PurpleSnake(const Grid& g) : Snake(g, sf::Color(128,0,128)) {}
