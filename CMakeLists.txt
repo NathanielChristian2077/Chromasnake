@@ -15,6 +15,8 @@ add_executable(chromasnake
     App.cpp
     Grid.cpp
     Food.cpp
+    Snake.cpp
+    Game.cpp
 )
 
 target_include_directories(chromasnake PRIVATE src)
