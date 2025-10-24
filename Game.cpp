@@ -72,7 +72,7 @@ void Game::draw(sf::RenderWindow &w) const
             t.setFont(font);
             t.setCharacterSize(24);
             t.setFillColor(sf::Color::White);
-            t.setString("Vencedor: " + std::string(s ? s->name() : "Snake"));
+            t.setString("Cabou ;P");
             t.setPosition(8.f, 6.f);
             w.draw(t);
         }
